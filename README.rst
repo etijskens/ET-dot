@@ -2,16 +2,11 @@
 ET-dot
 ======
 
+The example from the `Micc_ <https://github.com/etijskens/et-micc>`_ tutorials.
 
-
-<Enter a one-sentence description of this project here.>
-
+Computing the dot product in Python, Fortran and C++.
 
 * Free software: MIT license
 * Documentation: https://ET-dot.readthedocs.io.
 
 
-Features
---------
-
-* TODO
