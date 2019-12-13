@@ -1,16 +1,15 @@
-This file documents a python module built from Fortran code with f2py.
-You should document the Python interfaces, *NOT* the Fortran interfaces.
-
 Module et_dot.dotf
-*********************************************************************
+******************
 
 Module :py:mod:`dotf` built from fortran code in :file:`f2py_dotf/dotf.f90`.
 
-.. function:: add(x,y,z)
-   :module: et_dot.dotf
-   
-   Compute the sum of *x* and *y* and store the result in *z* (overwrite).
+.. function:: dotf(a,b)
+  :module: et_dot.dotf
 
-   :param x: 1D Numpy array with ``dtype=numpy.float64`` (input)
-   :param y: 1D Numpy array with ``dtype=numpy.float64`` (input)
-   :param z: 1D Numpy array with ``dtype=numpy.float64`` (output)
+  Compute the dot product of *a* and *b* (in Fortran.)
+
+  :param a: 1D Numpy array with ``dtype=numpy.float64``
+  :param b: 1D Numpy array with ``dtype=numpy.float64``
+  :returns: the dot product of *a* and *b*
+  :rtype: ``numpy.float64``
+

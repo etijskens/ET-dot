@@ -1,17 +1,15 @@
-This file documents a python module built from C++ code with pybind11.
-You should document the Python interfaces, *NOT* the C++ interfaces.
-
 Module et_dot.dotc
-*********************************************************************
+******************
 
-Module :py:mod:`dotc` built from C++ code in :file:`cpp_dotc/dotc.cpp`.
+Module :py:mod:`dotc` built from fortran code in :file:`cpp_dotc/dotc.cpp`.
 
-.. function:: add(x,y,z)
-   :module: et_dot.dotc
-   
-   Compute the sum of *x* and *y* and store the result in *z* (overwrite).
+.. function:: dotc(a,b)
+  :module: et_dot.dotc
 
-   :param x: 1D Numpy array with ``dtype=numpy.float64`` (input)
-   :param y: 1D Numpy array with ``dtype=numpy.float64`` (input)
-   :param z: 1D Numpy array with ``dtype=numpy.float64`` (output)
-   
+  Compute the dot product of *a* and *b* (in C++.)
+
+  :param a: 1D Numpy array with ``dtype=numpy.float64``
+  :param b: 1D Numpy array with ``dtype=numpy.float64``
+  :returns: the dot product of *a* and *b*
+  :rtype: ``numpy.float64``
+
