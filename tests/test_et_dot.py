@@ -45,6 +45,44 @@ def test_dot_commutative_2():
         ba = et_dot.dot(b,a)
         assert ab==ba
 
+
+def test_dot_zero():
+    # Fix the seed for the random number generator of module random.
+    random.seed(0)
+    # choose array size
+    n = 10
+    # create two arrays of length n with with zeros:
+    a = n * [0]
+    zero = n * [0]
+    # repetion loop (the underscore is a placeholder for a variable dat we do not use):
+    for _ in range(1000):
+        # fill a with random float numbers:
+        for i in range(n):
+            a[i] = random.random()
+        # do the test
+        azero = et_dot.dot(a, zero)
+        assert azero == 0
+
+
+def test_dot_one():
+    # Fix the seed for the random number generator of module random.
+    random.seed(0)
+    # choose array size
+    n = 10
+    # create two arrays of length n with with zeros:
+    a = n * [0]
+    one = n * [1.0]
+    # repetion loop (the underscore is a placeholder for a variable dat we do not use):
+    for _ in range(1000):
+        # fill a with random float numbers:
+        for i in range(n):
+            a[i] = random.random()
+        # do the test
+        aone = et_dot.dot(a, one)
+        expected = sum(a)
+        assert aone == expected
+
+
 # ==============================================================================
 # The code below is for debugging a particular test.
 # (otherwise all tests are normally run with pytest).
