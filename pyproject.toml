@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ET-dot"
-version = "0.0.7"
+version = "0.1.0"
 description = "<Enter a one-sentence description of this project here.>"
 authors = ["Engelbert Tijskens <engelbert.tijskens@uantwerpen.be>"]
 license = "MIT"
@@ -14,6 +14,7 @@ keywords = ['packaging', 'poetry']
 
 [tool.poetry.dependencies]
 python = "^3.7"
+et-micc-build = "^0.10.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.4.2"
