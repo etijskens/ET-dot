@@ -26,6 +26,24 @@ def test_dot_commutative():
     ba = et_dot.dot(b,a)
     assert ab==ba
 
+def test_dot_commutative_2():
+    # Fix the seed for the random number generator of module random.
+    random.seed(0)
+    # choose array size
+    n = 10
+    # create two arrays of length n with with zeros:
+    a = n * [0]
+    b = n * [0]
+    # repetion loop:
+    for r in range(1000):
+        # fill a and b with random float numbers:
+        for i in range(n):
+           a[i] = random.random()
+           b[i] = random.random()
+        # do the test
+        ab = et_dot.dot(a,b)
+        ba = et_dot.dot(b,a)
+        assert ab==ba
 
 # ==============================================================================
 # The code below is for debugging a particular test.
