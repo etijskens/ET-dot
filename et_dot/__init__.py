@@ -4,7 +4,7 @@ Package et_dot
 ==============
 Python module for computing the dot product of two arrays.
 """
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 try:
     import et_dot.dotf
