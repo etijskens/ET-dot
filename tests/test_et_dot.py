@@ -5,6 +5,8 @@
 import random
 import math
 
+import pytest
+
 import et_dot
 
 
@@ -91,6 +93,13 @@ def test_dot_one_2():
     expected = 1.0
     result = et_dot.dot(a, one)
     assert math.isclose(result, expected, abs_tol=10.0)
+
+
+def test_dot_unequal_length():
+    a = [1, 2]
+    b = [1, 2, 3]
+    with pytest.raises(ArithmeticError):
+        et_dot.dot(a, b)
 
 
 # ==============================================================================
