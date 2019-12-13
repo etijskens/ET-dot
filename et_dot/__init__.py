@@ -4,7 +4,20 @@ Package et_dot
 ==============
 Python module for computing the dot product of two arrays.
 """
-__version__ = "0.1.1"
+__version__ = "0.3.0"
+
+try:
+    import et_dot.dotc
+except ModuleNotFoundError as e:
+    # Try to build this binary extension:
+    from pathlib import Path
+    import click
+    from et_micc_build.cli_micc_build import auto_build_binary_extension
+    msg = auto_build_binary_extension(Path(__file__).parent, 'dotc')
+    if not msg:
+        import et_dot.dotc
+    else:
+        click.secho(msg, fg='bright_red')
 
 try:
     import et_dot.dotf
