@@ -3,6 +3,7 @@
 """Tests for et_dot package."""
 
 import random
+import math
 
 import et_dot
 
@@ -89,7 +90,7 @@ def test_dot_one_2():
     one = [1.0, 1.0, 1.0]
     expected = 1.0
     result = et_dot.dot(a, one)
-    assert result == expected
+    assert math.isclose(result, expected, abs_tol=10.0)
 
 
 # ==============================================================================
