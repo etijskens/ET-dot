@@ -83,6 +83,15 @@ def test_dot_one():
         assert aone == expected
 
 
+def test_dot_one_2():
+    a1 = 1.0e16
+    a = [a1, 1.0, -a1]
+    one = [1.0, 1.0, 1.0]
+    expected = 1.0
+    result = et_dot.dot(a, one)
+    assert result == expected
+
+
 # ==============================================================================
 # The code below is for debugging a particular test.
 # (otherwise all tests are normally run with pytest).
