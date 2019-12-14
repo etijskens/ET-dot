@@ -6,7 +6,8 @@ Tests for C++ module ET-dot.dotc.
 """
 
 # import our binary extension
-import et_dot.dotc as cpp
+import et_dot # this may engage auto-build
+cpp = et_dot.dotc
 
 import numpy as np
 

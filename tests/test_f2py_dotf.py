@@ -5,7 +5,9 @@
 import numpy as np
 
 # import the binary extension and rename the module locally as f90
-import et_dot.dotf as f90
+import et_dot
+f90 = et_dot.dotf
+
 
 def test_dotf_aa():
     a = np.array([0, 1, 2, 3, 4], dtype=np.float)
