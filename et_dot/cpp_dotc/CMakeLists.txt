@@ -14,6 +14,6 @@ project(dotc CXX)
 find_package(pybind11 CONFIG REQUIRED)
 pybind11_add_module(dotc dotc.cpp)
 
-install(FILES       "_build/dotc${PYTHON_MODULE_EXTENSION}"
+install(FILES       "_cmake_build/dotc${PYTHON_MODULE_EXTENSION}"
         DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/.."
        )

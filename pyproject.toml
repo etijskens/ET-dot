@@ -14,7 +14,7 @@ keywords = ['packaging', 'poetry']
 
 [tool.poetry.dependencies]
 python = "^3.6"
-et-micc-build = "^0.10.10"
+et-micc-build = "^1.0.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.4.2"
